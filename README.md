@@ -5,11 +5,11 @@ This UI is for the ATS system I developed
 The UI Interface
 ![UI Screen Shot](/static/img/ScreenShot.png)
 
-Left Panel contains input and output textareas.
-Right Panel consists of 
-1. Keywords areas user can input. They will be included in the summary.
-2. checkboxes and radioboxes for setting different aspects' levels of producing a summary.
-For example : Centrality, First Paragraph importance, Redundancy and number of output characters.
+* Left Panel contains input and output textareas.
+* Right Panel consists of 
+  1. Keywords areas user can input. They will be included in the summary.
+  2. checkboxes and radioboxes for setting different aspects' levels of producing a summary.
+    For example : Centrality, First Paragraph importance, Redundancy and number of output characters.
 
 ## Structure
 1. templates / static folders: html file / css and javascript files
@@ -17,5 +17,5 @@ For example : Centrality, First Paragraph importance, Redundancy and number of o
 3. Reports and readmes for understanding the concepts of summarization algorithms.
 
 ## Notice
-The whole Python algorithms are not uploaded here because they are being used by a company. 
+The whole Python algorithms are not uploaded here because they are being used by a company.  
 However, by reading the Reports, you can understand the concepts.
