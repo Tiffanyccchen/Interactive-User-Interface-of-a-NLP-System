@@ -7,8 +7,8 @@ The UI Interface
 
 * Left Panel contains input and output textareas.
 * Right Panel consists of 
-  1. Keywords areas user can input. They will be included in the summary.
-  2. checkboxes and radioboxes for setting different aspects' levels of producing a summary.
+  1. Keywords areas user can input. They will be included or excluded in the summary.
+  2. Xheckboxes and Radioboxes for setting different aspects' levels of producing a summary.
     For example : Centrality, First Paragraph importance, Redundancy and number of output characters.
 
 ## Structure
