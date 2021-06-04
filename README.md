@@ -18,6 +18,7 @@ The UI Interface
 ## Structure
 1. templates / static folders: html file / css and javascript files
 2. The Python kernel file connecting the front end, back end, and produces summaries.
+3. The Keyword folder contains codes for pretraining doc2vec models, clustering, modeling, and use them to finding keywords in a new document.
 3. Reports and readmes for understanding the concepts of summarization algorithms.
 
 ## Notice
