@@ -1,5 +1,5 @@
 # Interactive User Interface of a NLP System
-This UI is for the ATS system I developed
+This UI is for the ATS system I developed.
 
 ## Introduction
 [The Demo Video](https://www.youtube.com/watch?v=I4NF0fCviHI)  
