@@ -1,0 +1,359 @@
+#UpBlueCard {
+    position:relative;
+    width: 1440px;
+    height: 74px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: #306bec;
+  }
+#AI-logo-Background {
+    /*position to UpBlueCard*/
+    position:absolute;
+    top:10px;
+    bottom:10px;
+    left:38px;
+
+    width: 54px;
+    height: 54px;
+    background-color: #538cff;
+    }
+#AI-logo-Copy {
+    /*position to UpBlueCard*/
+    position:absolute;
+    top:19px;
+    bottom:19px;
+    left:48px;
+
+    width: 34px;
+    height: 36px;
+    object-fit: contain;
+    }
+#AI-Demo-2020 {
+    /*position to UpBlueCard*/
+    position:absolute;  
+    top:19px;
+    bottom:19px;
+    left:107px;
+
+    width: 134px;
+    height: 36px;
+    font-family: PingFangTC;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: #ffffff;
+    }
+#TabCard {
+    position:relative;
+    width: 1439px;
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #8d8d8d;
+    }
+#tab {
+    margin-left: 48px;/*to left align tabs*/
+    list-style-type: none;
+    padding: 0;
+    overflow: auto;
+}
+.tabnames {
+    float: left;
+
+    width:200px;
+    height:60px;
+    text-align: center;
+}
+
+.tablinks {
+    width: 64px;
+    height: 20px;
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: center;
+    color: #8d8d8d;
+}
+.tabnames:hover {
+    /*移到該tab區域->該區域變化*/
+    border-bottom: 4px solid #538cff;
+}
+#LeftWhiteCard {
+    position:relative;
+    width: 987px;
+    height: 890px;
+    background-color: #ffffff;
+}
+#SummaryTitleCard {
+    position:relative;
+    width: 987px;
+    height: 126px;
+    background-color: #ffffff;
+}
+#NameofWork {
+    /*position to LeftWhiteCard*/  
+    position:absolute;
+    top:53px;
+    bottom:53px;
+    left:48px;
+    
+    width: 80px;
+    height: 20px;
+    font-family: PingFangTC;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #000000;
+}  
+form#Title{
+    /*position to LeftWhiteCard*/  
+    position:absolute;
+    top:126px;
+    left:48px;
+
+    width: 891px;
+    height: 76px;
+    background-color:  #ffffff
+}
+label[for="title"] {
+    /*position to form#Title*/  
+    position:absolute;
+    top :0px;
+    left:0px;
+
+    width: 278px;
+    height: 20px;
+
+    font-family: PingFangTC;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+textarea#title{
+    /*position to form#Title*/  
+    position:absolute;
+    top:28px;
+    left:0px;
+
+    width: 871px;
+    height: 48px;  
+    border-radius: 2px;
+    border: solid 1px #8d8d8d;
+    background-color: #ffffff;
+
+    /*setting of text area's texts*/
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: black;
+
+    /*entered text position to textarea*/
+    padding-left:16px;
+    padding-top:12px;
+    padding-bottom:12px;
+    resize: none;
+}
+form#Context{
+    /*position to LeftWhiteCard*/    
+    position:absolute;
+    left:48px;
+    top:244px;
+
+    width: 891px;
+    height: 128px;
+}
+label[for="context"] {
+    /*position to form#Context*/    
+    position:absolute;
+    top :0px;
+    left:0px;
+
+    width: 280px;
+    height: 20px;
+    font-family: PingFangTC;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+/* 用div 而不用 textarea 是為了 highlight(黃色標記)/ textarea無法設定文字樣式, 只有純文字 */
+div#context {
+    /*position to form#Context*/  
+    position:absolute;
+    top:28px;
+    left:0px;
+
+    width: 871px;
+    height: 200px;
+    border-radius: 2px;
+    border: solid 1px grey;
+    background-color: #ffffff;
+
+    /*setting of text area's texts*/
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: black;
+
+    /*entered text position to textarea*/
+    padding-left:16px;
+    padding-top:12px;
+
+    /*使得 div 外觀/使用上 像 textarea*/
+    display: inline-block;
+    vertical-align: top;
+    resize: both;
+    overflow: auto;
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    white-space: pre-wrap; /*空白格式跟複製貼上來源之原文一樣*/
+}
+
+button[type="reset"]{
+    /*position to LeftWhiteCard*/ 
+    position:absolute;
+    top:532px;
+    left:677px;
+    width: 96px;
+    height: 48px;
+    border-style:none;
+    border-radius: 2px;
+    background-color: #ffffff;
+
+    /*setting of the button's texts*/
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #306bec;
+
+    cursor: pointer; /*當游標移至按鈕時 -> 從箭頭換成手指*/
+}
+button[type="submit"] {
+    /*position to LeftWhiteCard*/ 
+    position:absolute;
+    top:532px;
+    left:793px;
+
+    width: 96px;
+    height: 48px;
+    border-style:none;
+    border-radius: 2px;
+    background-color: #538cff;
+
+    /*setting of the button's texts*/
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+
+    cursor: pointer; /*當游標移至按鈕時 -> 從箭頭換成手指*/
+}  
+form#Summary{
+    /*position to LeftWhiteCard*/    
+    position:absolute;
+    left:48px;
+    top:630px;
+
+    width: 871px;
+    height: 200px;
+}
+label[for="summary"] {
+    /*position to summary form*/    
+    position:absolute;
+    top :0px;
+    left:0px;
+
+    width: 280px;
+    height: 20px;
+    font-family: PingFangTC;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+textarea#summary {
+    /*position to context form*/  
+    position:absolute;
+    top:28px;
+    left:0px;
+
+    width: 871px;
+    height: 200px;
+    border-radius: 2px;
+    border: solid 1px #8d8d8d;
+    background-color: #ffffff;
+
+    /*write together*/
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: black;
+
+    /*entered text position to textarea*/
+    padding-left:16px;
+    padding-top:12px;
+    resize: none;
+}
+
+/* 文字方框中預輸入之文字之樣式*/
+textarea::-webkit-input-placeholder{
+    color:grey;
+}
+
+/* 游標移至文字方框時增加邊界*/
+textarea:focus, div#context:focus {
+    border: 1px solid;
+}  
+
+/*螢光標示樣式預先設定*/
+.highlight {
+    display: inline-block;
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: black;
+    background-color: yellow;
+}

@@ -1,0 +1,338 @@
+#RightGreyCard{
+    position:absolute;
+    top:160px;
+    left:987px;
+
+    width: 453px;
+    height: 890px;
+    background-color: #fafafa;
+  }
+form#Advanced{
+    /*position to #RightGreyCard*/
+    position: absolute;
+    top:23px;
+    left:48px;
+}  
+#AdvancedSetting{
+    /*position to form#Advanced*/
+    position:absolute;
+    top:2px;
+    left:76px;
+
+    width: 64px;
+    height: 22px;
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #525252;
+}
+
+#switch {
+    /*position to form#Advanced */
+    position: absolute;
+    top:0px;
+    left:0px;
+
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #fafafa;
+}
+/* 進階設定圓圓那顆 */
+#slider:before {
+    /*position to slider*/
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-color: #a8a8a8;
+    border-radius: 12px;
+
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+/* 進階設定橢圓形那層(包覆圓圓那顆) the box around the slider */
+#slider {
+    /*position to form#Advanced */
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   right:0px;
+   bottom:0px;
+
+   cursor: pointer;
+   background-color: white;
+   border-radius: 12px;
+}  
+/* 所有 選擇 條件 (左邊對齊設定)*/
+form.setting{
+    /*position to #RightGreyCard */
+    position:absolute;
+    left:48px;
+}
+form.setting#Neckey{
+    top:83px;
+}
+form.setting#NotNeckey{
+    top:313px;
+}
+form.setting#Repeatmention{
+    top:553px;
+}
+form.setting#Firstpara{
+    top:603px;
+}
+form.setting#Redundant{
+    top:653px;
+}
+form.setting#Compression{
+    top:703px;
+}
+form.setting#CharNum{
+    top:753px;
+}
+/* 所有 勾選框設定*/
+input[name="checkpar"]{
+    position:absolute;
+    top:0px;
+    left:0px;
+
+    width: 14px;
+    height: 14px;
+    border-radius: 1px;
+    border: solid 1px #c6c6c6;
+    background-color: #ffffff;
+}
+/* 所有 條件文字設定*/
+label.criteria{
+    position:absolute;
+    top:0px;
+    left:24px;
+
+    width: 280px;
+    height: 20px;
+    font-family: PingFangTC;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #c6c6c6;
+}
+/* 關鍵字文字框設定*/
+textarea[name = "input"]{
+    position:absolute;
+    top:25px;
+    left:0px;
+
+    width: 357px;
+    height: 90px;
+    border-radius: 2px;
+    border: solid 1px #c6c6c6;
+    background-color: #ffffff;
+    /*write together*/
+    font-family: PingFangTC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: black;
+    /*text position to textarea*/
+    padding-left:16px;
+    padding-top:12px;
+    resize: none;
+}
+/* 所有 圓形選擇設定*/
+input[type = radio]{
+    position:absolute;
+    width: 14px;
+    height: 14px;
+    border: solid 2px #ececec;
+    background-color: #ffffff;
+    /*在上面層(數字越大越上面)(若圖案有重疊)*/
+    z-index : 1;
+}
+input[type = radio][name="degree1"]{
+    left:232px;
+}
+input[type = radio][name="degree2"]{
+    left:259px;
+}
+input[type = radio][name="degree3"]{
+    left:286px;
+}
+input[type = radio][name="degree4"]{
+    left:313px;
+}
+input[type = radio][name="degree5"]{
+    left:340px;
+}
+input[type = radio][class = "neckeywordls[]"], input[type = radio][class = "notneckeywordls[]"]{
+    top:158px;
+}
+/* 所有 強度 文字設定*/
+span.degree{
+    position:absolute;
+    top:158px;
+    left:152px;
+
+    width: 28px;
+    height: 20px;
+    font-family: PingFangTC;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #c6c6c6;    
+}
+/* 所有 無高 文字設定*/
+span.lowhigh{
+    position:absolute;
+    width: 14px;
+    height: 20px;
+    font-family: PingFangTC;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #c6c6c6;
+}
+span.low{
+    left:220px;
+}
+span.high{
+    left:362px;
+}
+span.low#neclow, span.low#notneclow, span.high#nechigh, span.high#notnechigh{
+    top:158px;
+}    
+/* 所有 無到高 程度線 文字設定*/
+span.degreeline{
+    position:absolute;
+    top:10px;
+    left:236px;
+    
+    width: 112px;
+    height: 2px;
+    background-color: #ececec;
+    /*在最底層*/
+    z-index : 0;
+}
+span.degreeline#necdegreeline, span.degreeline#notnecdegreeline{
+    top:168px;
+}    
+/* 關鍵字分隔線設定*/
+span.splitline{
+    position:absolute;
+    top:200px;
+    left:0px;
+
+    width: 373px;
+    height: 1px;
+    background-color: #c6c6c6;
+}
+/* 字數文字框設定*/
+textarea#charnuminput{
+    position:absolute;
+    top:0px;
+    left:225px;
+
+    width: 120px;
+    height: 30px;
+    border: solid 1px #c6c6c6;
+    background-color: #ffffff;
+
+    font-family: PingFangSC;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: black;
+
+    padding-left:16px;
+    padding-top:12px;
+    resize: none;
+}
+
+
+
+/* interaction change color part */
+
+/* 進階設定圓圓那顆 */
+input[id="checkslider"]:checked + #slider:before {
+    background-color: #306bec;
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    border-radius: 12px;
+}  
+
+/* 進階設定橢圓形那層(包覆圓圓那顆) the box around the slider */
+input[id="checkslider"]:checked + #slider {
+    background-color: #d6e5ff;
+}
+
+/*勾選框被勾選了以後條件文字顏色變化 */
+input[name="checkpar"]#neckeyword:checked + label.criteria[for="neckeyword"] {
+    color: #306bec;
+}
+input[name="checkpar"]#notneckeyword:checked + label.criteria[for="notneckeyword"] {
+    color: #306bec;
+}
+input[name="checkpar"]#repeatmention:checked + label.criteria[for="repeatmention"] {
+    color: #306bec;
+}
+input[name="checkpar"]#firstpara:checked + label.criteria[for="firstpara"] {
+    color: #306bec;
+}
+input[name="checkpar"]#redundant:checked + label.criteria[for="redundant"] {
+    color: #306bec;
+}
+input[name="checkpar"]#compression:checked + label.criteria[for="compression"] {
+    color: #306bec;
+}
+input[name="checkpar"]#charnum:checked + label.criteria[for="charnum"] {
+    color: #306bec;
+}
+
+/*圓形框被選了以後低高文字顏色變化 */
+input[type = "radio"][class = "neckeywordls[]"]:checked ~ span.nec {
+    color: black;
+}
+input[type = "radio"][class = "notneckeywordls[]"]:checked ~ span.notnec{
+    color: black;
+}
+input[type = "radio"][class = "repeatmentionls[]"]:checked ~ span.repeatmention{
+    color: black;
+}
+input[type = "radio"][class = "firstparals[]"]:checked ~ span.firstpara{
+    color: black;
+}
+input[type = "radio"][class = "redundantls[]"]:checked ~ span.redundant{
+    color: black;
+}
+input[type = "radio"][class = "compressionls[]"]:checked ~ span.compression{
+    color: black;
+}
+input[type = "radio"][name = "charnumls[]"]:checked ~ span.charnum{
+    color: black;
+}
+
+
+

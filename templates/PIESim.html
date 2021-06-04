@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8" />
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+<meta http-equiv = "X-UA-Compatible" content = "ie=edge" />
+<link href = "../static/css/PIESim_Style_left.css" rel = "stylesheet"/>
+<link href = "../static/css/PIESim_Style_right.css" rel = "stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--.js file 更新可以即時載入 --> 
+<script src="../static/js/PIESim_interaction.js?u={{ last_updated }}"></script>
+<title>聯合報2020人工智慧技術展示</title>
+</head>
+<body id = "ATS">
+    <div>
+        <div id = "UpBlueCard">
+            <div id = "AI-logo-Background"></div>
+            <img id="AI-logo-Copy" src="../static/img/ai-logo-copy.png" srcset="./static/img/ai-logo-copy@2x.png 2x, ./static/img/ai-logo-copy@3x.png 3x">
+            <div id = "AI-Demo-2020">AI Demo 2020</div>
+        </div>
+        <div id = "TabCard" >
+            <ul id = "tab">
+                <li class = "tabnames"><a class="tablinks">TTS</a></li>
+                <li class = "tabnames"><a class="tablinks">寫作輔助</a></li>
+                <li class = "tabnames"><a class="tablinks">新聞摘要</a></li>
+                <li class = "tabnames"><a class="tablinks">One Piece 2.0</a></li>
+                <li class = "tabnames"><a class="tablinks">新聞小幫手</a></li>
+            </ul>
+        </div>
+        <div id = "LeftWhiteCard">
+            <div id = "SummaryTitleCard">
+                <div id = "NameofWork">新聞摘要</div>
+            </div>
+            <form id = "Title">
+                <label for="title">新聞標題</label>    
+                <textarea id="title" class = "title highlightref"></textarea>
+            </form>
+            <form id = "Context">
+                <label for="context">原文</label>    
+                <!--框框可以調整大小--> 
+                <div id="context" contentEditable></div> 
+            </form>
+            <button type="reset">重置</button>
+            <button type="submit">摘要</button>
+​            <form id = "Summary">
+                <label for="summary">摘要</label>    
+                <textarea id="summary" class = "summary highlightref"></textarea>
+            </form>
+        </div>
+        <div id = "RightGreyCard">
+            <form id = "Advanced">
+                <div id = "AdvancedSetting">進階設定</div>
+                <label id="switch">
+                    <!--左右滑動進階設定按鈕--> 
+                    <input id = "checkslider" type="checkbox">
+                    <span id="slider"></span>
+                </label>
+            </form>   
+            <form class = "setting" id = "Neckey">
+                <!--條件勾選--> 
+                <input id="neckeyword" type="checkbox" class="neckeywordls[]" name="checkpar">
+                <label class = "criteria" for="neckeyword" >必要關鍵詞</label><br>
+                <textarea id="necinput" class="neckeywordls[] highlightref" name="input" placeholder = "請輸入必要關鍵詞" ></textarea>
+                <!--低到高程度選擇--> 
+                <input type = "radio" class="neckeywordls[]" name="degree1" value = "0.0">
+                <input type = "radio" class="neckeywordls[]" name="degree2" value = "0.25" checked = "true">
+                <input type = "radio" class="neckeywordls[]" name="degree3" value = "0.5">
+                <input type = "radio" class="neckeywordls[]" name="degree4" value = "0.75">
+                <input type = "radio" class="neckeywordls[]" name="degree5" value = "1.0">
+                <span class = "degree nec" id = "necdegree">強度</span>
+                <span class = "lowhigh low nec" id = "neclow">無</span>
+                <span class = "lowhigh high nec"  id = "nechigh">高</span>
+                <!--低到高程度貫穿線--> 
+                <span class = "degreeline" id = "necdegreeline"></span>
+                <span class = "splitline" id = "necsplitline"></span>
+            </form>
+            <form class = "setting" id = "NotNeckey">
+                <input id="notneckeyword" type="checkbox" class="notneckeywordls[]"  name="checkpar">
+                <label class = "criteria" for="notneckeyword" >排除關鍵詞</label><br>
+                <textarea id="notnecinput" class="notneckeywordls[] highlightref" name="input" placeholder = "請輸入排除關鍵詞" ></textarea>
+                <input type = "radio" class="notneckeywordls[]" name="degree1" value = "0.0">
+                <input type = "radio" class="notneckeywordls[]" name="degree2" value = "0.25" checked = "true">
+                <input type = "radio" class="notneckeywordls[]" name="degree3" value = "0.5">
+                <input type = "radio" class="notneckeywordls[]" name="degree4" value = "0.75">
+                <input type = "radio" class="notneckeywordls[]" name="degree5" value = "1.0">
+                <span class = "degree notnec" id = "notnecdegree">強度</span>
+                <span class = "lowhigh low notnec" id = "notneclow">無</span>
+                <span class = "lowhigh high notnec" id = "notnechigh">高</span>
+                <span class = "degreeline" id = "notnecdegreeline"></span>
+                <span class = "splitline" id = "notnecsplitline"></span>
+            </form>
+            <form class = "setting" id = "Repeatmention">
+                <input id="repeatmention" type="checkbox" class="repeatmentionls[]" name="checkpar">
+                <label class = "criteria" for="repeatmention" >多次提及強度</label>
+                <input type = "radio" class="repeatmentionls[]" name="degree1" value = "0.0">
+                <input type = "radio" class="repeatmentionls[]" name="degree2" value = "0.25">
+                <input type = "radio" class="repeatmentionls[]" name="degree3" value = "0.5">
+                <input type = "radio" class="repeatmentionls[]" name="degree4" value = "0.75" checked = "true">
+                <input type = "radio" class="repeatmentionls[]" name="degree5" value = "1.0">
+                <span class = "lowhigh low repeatmention" id = "repeatlow">無</span>
+                <span class = "lowhigh high repeatmention" id = "repeathigh">高</span>
+                <span class = "degreeline" id = "repeatdegreeline"></span>
+            </form>
+            <form class = "setting" id = "Firstpara">
+                <input id="firstpara" type="checkbox" class="firstparals[]" name="checkpar">
+                <label class = "criteria" for="firstpara" >首段文字強度</label>
+                <input type = "radio" class="firstparals[]" name="degree1" value = "0.0">
+                <input type = "radio" class="firstparals[]" name="degree2" value = "0.25" checked = "true">
+                <input type = "radio" class="firstparals[]" name="degree3" value = "0.5">
+                <input type = "radio" class="firstparals[]" name="degree4" value = "0.75">
+                <input type = "radio" class="firstparals[]" name="degree5" value = "1.0">
+                <span class = "lowhigh low firstpara" id = "firstparalow">無</span>
+                <span class = "lowhigh high firstpara" id = "firstparaigh">高</span>
+                <span class = "degreeline" id = "firstparaline"></span>
+            </form>
+            <form class = "setting" id = "Redundant">
+                <input id="redundant" type="checkbox" class="redundantls[]" name="checkpar">
+                <label class = "criteria" for="redundant" >省略重複詞(句)強度</label>
+                <input type = "radio" class="redundantls[]" name="degree1" value = "0.0">
+                <input type = "radio" class="redundantls[]" name="degree2" value = "0.25" checked = "true">
+                <input type = "radio" class="redundantls[]" name="degree3" value = "0.5">
+                <input type = "radio" class="redundantls[]" name="degree4" value = "0.75">
+                <input type = "radio" class="redundantls[]" name="degree5" value = "1.0">
+                <span class = "lowhigh low redundant" id = "redundantlow">無</span>
+                <span class = "lowhigh high redundant" id = "redundanthigh">高</span>
+                <span class = "degreeline" id = "redundantdegreeline"></span>
+            </form>
+            <form class = "setting" id = "Compression">
+                <input id="compression" type="checkbox"  class="compressionls[]" name="checkpar">
+                <label class = "criteria" for="compression" >句子壓縮強度</label>
+                <input type = "radio" class="compressionls[]" name="degree1" value = "0.0">
+                <input type = "radio" class="compressionls[]" name="degree2" value = "0.25">
+                <input type = "radio" class="compressionls[]" name="degree3" value = "0.5">
+                <input type = "radio" class="compressionls[]" name="degree4" value = "0.75">
+                <input type = "radio" class="compressionls[]" name="degree5" value = "1.0" checked = "true">
+                <span class = "lowhigh low compression" id = "compressionlow">無</span>
+                <span class = "lowhigh high compression" id = "compressionhigh">高</span>
+                <span class = "degreeline" id = "compressiondegreeline"></span>
+            </form>
+            <form class = "setting" id = "CharNum">
+                <input id="charnum" type="checkbox"  class="charnumls[]" name="checkpar" value="100">
+                <label class = "criteria" for="charnum" >指定字數</label>
+                <textarea id="charnuminput" class="charnumls[]" placeholder = "請輸入字數"></textarea>
+            </form>
+        </div>
+    </div>       
+</body>
