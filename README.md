@@ -2,11 +2,14 @@
 This UI is for the ATS system I developed
 
 ## Introduction
-The UI Interface
-![UI Screen Shot](/static/img/ScreenShot.png)
-[The Demo Video](https://www.youtube.com/watch?v=I4NF0fCviHI)
+[The Demo Video](https://www.youtube.com/watch?v=I4NF0fCviHI)  
 
-* Left Panel contains input and output textareas.
+The UI Interface
+
+![UI Screen Shot](/static/img/ScreenShot.png)
+
+
+* Left Panel contains input / output textareas and summary / reset buttons.
 * Right Panel consists of 
   1. Keywords areas user can input. They will be included or excluded in the summary.
   2. Xheckboxes and Radioboxes for setting different aspects' levels of producing a summary.
